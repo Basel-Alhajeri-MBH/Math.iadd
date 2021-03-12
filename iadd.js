@@ -16,18 +16,22 @@ Object.defineProperty(this && this.Math || Math, 'iadd', {
                 x = x | 0;
                 y = y & 0xFFFFFFFF;
                 return (x + y) | 0;
-            }/*, function iadd(x, y) {
-                return (x >> 16 + y >> 16) & 0xFFFF << 16 | ((x + y) & 0xFFFF);
             }, function iadd(x, y) {
                 var x16 = x & 0xFFFF;
                 var y16 = y & 0xFFFF;
-                var res16 = (x16 + y16) & 0x1FFFF,
+                x = x >> 16 & 0xFFFF << 16;
+                y = y >> 16 & 0xFFFF << 16;
+                return (x16 + y16 + x + y) | 0;
+            }, function iadd(x, y) {
+                var x16 = x & 0xFFFF;
+                var y16 = y & 0xFFFF;
+                var res16 = (x16 + y16),
                     res;
-                x = (x >> 16) & 0xFFFF;
-                y = (y >> 16) & 0xFFFF;
-                res = (x + y) & 0x1FFFF;
-                return (res << 16 | res16) | 0;
-            }*/
+                x = x >> 16 & 0xFFFF;
+                y = y >> 16 & 0xFFFF;
+                res = x + y;
+                return ((res << 16) + res16) | 0;
+            }
         ];
         return safe_mbh_addion_functions[(Math.random() * safe_mbh_addion_functions.length) >>> 0];
     }(this && this.Math && this || {
