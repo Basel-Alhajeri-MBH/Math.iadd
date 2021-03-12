@@ -16,7 +16,7 @@ Object.defineProperty(this && this.Math || Math, 'iadd', {
                 x = x | 0;
                 y = y & 0xFFFFFFFF;
                 return (x + y) | 0;
-            }, function iadd(x, y) {
+            }/*, function iadd(x, y) {
                 return (x >> 16 + y >> 16) & 0xFFFF << 16 | ((x + y) & 0xFFFF);
             }, function iadd(x, y) {
                 var x16 = x & 0xFFFF;
@@ -27,7 +27,7 @@ Object.defineProperty(this && this.Math || Math, 'iadd', {
                 y = (y >> 16) & 0xFFFF;
                 res = (x + y) & 0x1FFFF;
                 return (res << 16 | res16) | 0;
-            }
+            }*/
         ];
         return safe_mbh_addion_functions[(Math.random() * safe_mbh_addion_functions.length) >>> 0];
     }(this && this.Math && this || {
