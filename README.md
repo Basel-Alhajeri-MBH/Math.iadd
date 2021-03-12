@@ -5,11 +5,11 @@
 \> `Math.iadd(0xFFFFFFFF, 1);`
 0
 + By C++
-`#include <iostream>
-
-int main() {
-  int i = 0xFFFFFFFF;
-  std::cout << i+1;
-  return 0;
-}`
+- `#include <iostream>`
+- ``
+- `int main() {`
+- `  int i = 0xFFFFFFFF;`
+- `  std::cout << i+1;`
+- `  return 0;`
+- `}`
 
