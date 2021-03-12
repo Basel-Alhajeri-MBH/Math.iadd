@@ -5,8 +5,8 @@
 \> `Math.iadd(0xFFFFFFFF, 1);`
 `0`
 #### By C++
-`#include <iostream>`
-`int main() {`
+`#include <iostream>
+int main() {`
 `  int i = 0xFFFFFFFF;`
 `  std::cout << i+1; // 0`
 `  return 0;`
