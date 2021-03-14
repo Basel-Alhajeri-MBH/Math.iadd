@@ -19,12 +19,6 @@ Object.defineProperty(this && this.Math || Math, 'iadd', {
             }, function iadd(x, y) {
                 var x16 = x & 0xFFFF;
                 var y16 = y & 0xFFFF;
-                x = x >> 16 & 0xFFFF << 16;
-                y = y >> 16 & 0xFFFF << 16;
-                return (x16 + y16 + x + y) | 0;
-            }, function iadd(x, y) {
-                var x16 = x & 0xFFFF;
-                var y16 = y & 0xFFFF;
                 var res16 = (x16 + y16),
                     res;
                 x = x >> 16 & 0xFFFF;
