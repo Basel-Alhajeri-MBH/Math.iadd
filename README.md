@@ -4,7 +4,8 @@
 #### By `Math.iadd` method
 ```javascript
 > `Math.iadd(0xFFFFFFFF, 1); // 0
-0```
+0
+```
 #### By C++
 ```cpp
 #include <iostream>
