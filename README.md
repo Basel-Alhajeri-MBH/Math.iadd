@@ -3,16 +3,22 @@
 ## e.g.
 #### By `Math.iadd` method
 ```javascript
-> `Math.iadd(0xFFFFFFFF, 1); // 0
+> Math.iadd(0xFFFFFFFF, 1); // 0
 0
 ```
 #### By C++
 ```cpp
 #include <iostream>
+
+int iadd(int, int);
 int main() {
-  int i = 0xFFFFFFFF;
-  std::cout << i+1; /* 0 */
+  std::cout << iadd(0xFFFFFFFF, 1); // 0 
   return 0;
+}
+
+int iadd(int a, int b) {
+  int sum = a + b;
+  return sum;
 }
 ```
 
